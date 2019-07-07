@@ -86,6 +86,13 @@ class ViewController: UICollectionViewController{
                 print("Failed to load: \(error.localizedDescription)")
             }
         }
+        else{
+            let alert = UIAlertController(title: "An error occured", message: "make sure to enter a valid account name, and that the account is public", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+                
+            }))
+            present(alert, animated: true, completion: nil)
+        }
     }
 
 }
