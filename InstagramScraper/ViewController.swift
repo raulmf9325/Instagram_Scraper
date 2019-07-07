@@ -107,7 +107,13 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 80, left: 10, bottom: 0, right: 10)
+        return UIEdgeInsets(top: 60, left: 10, bottom: 0, right: 10)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let imageDetails = ImageDetails()
+        imageDetails.url = imagesURLs[indexPath.item]
+        navigationController?.pushViewController(imageDetails, animated: true)
     }
 }
 
