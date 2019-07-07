@@ -1,0 +1,6 @@
+framework module Pods_InstagramScraper {
+  umbrella header "Pods-InstagramScraper-umbrella.h"
+
+  export *
+  module * { export * }
+}
